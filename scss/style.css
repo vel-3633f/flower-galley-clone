@@ -1,0 +1,196 @@
+.container {
+  width: 100%;
+  text-align: center;
+}
+
+html {
+  font-size: 30px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  color: #fff;
+  width: 100%;
+  background-color: #000;
+}
+
+main {
+  border-bottom: 1px #fff solid;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-view {
+  background-color: #000;
+  height: 100vh;
+}
+.first-view .image-box {
+  display: flex;
+}
+.first-view .image-box .image-item {
+  width: 33.3333333333vw;
+}
+.first-view .image-box .image-item img {
+  width: 100%;
+  height: 100vh;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.title-first {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  font-weight: 200;
+  margin-top: 100px;
+}
+
+.title-second {
+  border-bottom: 1px #fff solid;
+  font-size: 1.8rem;
+  font-weight: 200;
+  margin: 80px auto 0;
+}
+
+.information p:nth-child(2) {
+  margin-top: 30px;
+  font-size: 0.7rem;
+  font-weight: 200;
+  margin-top: 40px;
+}
+.information p:nth-child(3) {
+  font-size: 0.5rem;
+  font-weight: 200;
+}
+.information p:nth-child(4) {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 40px;
+}
+.information p:nth-child(5) {
+  font-size: 0.6rem;
+  font-weight: 200;
+  margin-top: 40px;
+}
+
+.gallery {
+  padding-top: 100px;
+}
+.gallery .gallery-box {
+  width: 50vw;
+  margin-top: 50px;
+}
+.gallery .gallery-box .item-left {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+.gallery .gallery-box .item-left img {
+  width: 48%;
+}
+.gallery .gallery-box .item-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+.gallery .gallery-box .item-right img {
+  width: 48%;
+}
+
+.access {
+  padding-top: 300px;
+  margin-bottom: 300px;
+}
+.access p:nth-child(2) {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 40px;
+}
+.access p:nth-child(3) {
+  font-size: 0.5rem;
+  font-weight: 200;
+  margin-top: 40px;
+}
+.access p:nth-child(4) {
+  font-size: 0.5rem;
+  font-weight: 200;
+  margin-top: 40px;
+}
+.access .button-hover {
+  width: 280px;
+  border: 1px #fff solid;
+  font-size: 0.5rem;
+  font-weight: 200;
+  padding: 15px 0;
+  margin-top: 40px;
+  transition: background-color 0.3s;
+}
+.access .button-hover:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.contact {
+  margin-bottom: 300px;
+}
+.contact .contact-button {
+  position: relative;
+  font-size: 0.5rem;
+  font-weight: 200;
+  border: 1px rgba(255, 255, 255, 0.5) solid;
+  width: 450px;
+  padding: 30px 0;
+  margin-top: 30px;
+  transition: border-color 0.3s, color 0.3s;
+}
+.contact .contact-button::before {
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  width: 140px;
+  height: 1px;
+  top: 1.4rem;
+  right: -30px;
+  transition: right 0.3s, background-color 0.2s;
+}
+.contact .contact-button::after {
+  position: absolute;
+  content: "";
+  background-color: #fff;
+  width: 15px;
+  height: 1px;
+  top: 1.4rem;
+  right: -30px;
+  transform: rotate(30deg);
+  transform-origin: right;
+  transition: right 0.3s, background-color 0.2s;
+}
+.contact .contact-button:hover::before, .contact .contact-button:hover::after {
+  right: -40px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.contact .contact-button:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer {
+  padding: 70px 30px;
+}
+footer p {
+  font-weight: 200;
+  font-size: 0.4rem;
+  margin-bottom: 30px;
+}
+footer .footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-flex a {
+  font-weight: 200;
+  font-size: 0.4rem;
+}/*# sourceMappingURL=style.css.map */
