@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   width: 100%;
   text-align: center;
@@ -10,8 +11,10 @@ html {
 
 body {
   color: #fff;
-  width: 100%;
+  width: 100vw;
+  max-width: 100vw;
   background-color: #000;
+  overflow-x: hidden;
 }
 
 main {
@@ -24,9 +27,130 @@ section {
   align-items: center;
 }
 
+header {
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+  /* ハンバーガーメニュー */
+  /* ハンバーガーの動き */
+  /* ハンバーガーここまで */
+}
+header.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+header a {
+  font-size: 0.7rem;
+  font-weight: 200;
+  display: block;
+  z-index: 5;
+}
+header .header-nav {
+  position: fixed;
+  z-index: 4;
+  background-color: #000;
+  width: 100vw;
+  padding-top: 70px;
+  top: -200px;
+  left: 0;
+  text-align: center;
+  opacity: 0;
+  transition: top 0.6s, opacity 0.6s;
+}
+header .header-nav.active {
+  top: 0px;
+  opacity: 1;
+}
+header .header-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .header-nav ul li {
+  margin-bottom: 20px;
+}
+header .header-nav ul li a {
+  font-size: 0.5rem;
+}
+header .hamburger_menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+}
+header .hamburger {
+  display: block;
+  width: 30px;
+  background-color: transparent;
+  border-color: transparent;
+  position: relative;
+}
+header .hamburger span {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 1.5px;
+  background-color: #fff;
+  transition: top 0.4s, transform 0.4s, opacity 0.6s, color 0.4s, bottom 0.4s;
+}
+header .hamburger span:nth-child(1) {
+  top: 13px;
+}
+header .hamburger span:nth-child(3) {
+  bottom: 13px;
+}
+header .active span:nth-child(1) {
+  top: 23px;
+  transform: rotate(-45deg);
+  background-color: white;
+}
+header .active span:nth-child(2) {
+  opacity: 0;
+}
+header .active span:nth-child(3) {
+  bottom: 26px;
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+.side-nav {
+  position: fixed;
+  z-index: 1;
+  right: -50px;
+  width: 500px;
+  bottom: 560px;
+  transform: rotate(270deg);
+  transform-origin: right bottom;
+  transition: right 0.6s;
+  display: flex;
+}
+.side-nav a {
+  display: inline-block;
+  font-size: 0.4rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  border: 1px solid #fff;
+  padding: 15px 30px;
+}
+.side-nav.show {
+  right: 0;
+}
+
 .first-view {
   background-color: #000;
   height: 100vh;
+  display: flex;
 }
 .first-view .image-box {
   display: flex;
@@ -46,7 +170,15 @@ section {
   font-size: 3rem;
   letter-spacing: 3px;
   font-weight: 200;
-  margin-top: 100px;
+  margin-top: 50px;
+  opacity: 0;
+  position: relative;
+  top: 50px;
+  transition: opacity 1s, top 1s;
+}
+.title-first.show {
+  top: 0;
+  opacity: 1;
 }
 
 .title-second {
@@ -56,6 +188,16 @@ section {
   margin: 80px auto 0;
 }
 
+.information {
+  opacity: 0;
+  position: relative;
+  top: 100px;
+  transition: opacity 1s, top 1s;
+}
+.information.show {
+  top: 0;
+  opacity: 1;
+}
 .information p:nth-child(2) {
   margin-top: 30px;
   font-size: 0.7rem;
@@ -80,6 +222,16 @@ section {
 .gallery {
   padding-top: 100px;
 }
+.gallery #js-gallery {
+  opacity: 0;
+  position: relative;
+  top: 30px;
+  transition: opacity 1s, top 1s;
+}
+.gallery #js-gallery.show {
+  top: 0;
+  opacity: 1;
+}
 .gallery .gallery-box {
   width: 50vw;
   margin-top: 50px;
@@ -99,6 +251,16 @@ section {
 }
 .gallery .gallery-box .item-right img {
   width: 48%;
+}
+.gallery .gallery-box .gallery-item {
+  opacity: 0;
+  position: relative;
+  top: 50px;
+  transition: opacity 1.5s, top 2s;
+}
+.gallery .gallery-box .gallery-item.show {
+  top: 0;
+  opacity: 1;
 }
 
 .access {
