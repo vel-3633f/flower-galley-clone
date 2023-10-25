@@ -14,7 +14,29 @@
     <link rel="stylesheet" href="scss/style.css" />
   </head>
   <body>
-    <header></header>
+    <header id="js-header">
+      <a href="#">FA EXHIBITION</a>
+      <div class="hamburger_menu">
+        <button class="hamburger" id="js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="header-nav" id="js-nav">
+        <ul>
+          <li><a href="#">TOP</a></li>
+          <li><a href="#">INFORMATION</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">ACCESS</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="side-nav" id="js-side">
+      <a href="#">FOR EXHIBITOR</a>
+      <a href="#">FOR VISITOR</a>
+    </div>
     <div class="container">
       <main>
         <section class="first-view">
@@ -22,7 +44,7 @@
             <div class="image-item">
               <img src="src/img/mainvisual1.jpg" alt="flower" />
             </div>
-            <div class="image-item">
+            <div class="image-item" id="center-img">
               <img src="src/img/mainvisual2.jpg" alt="flower" />
             </div>
             <div class="image-item">
@@ -30,9 +52,9 @@
             </div>
           </div>
         </section>
-        <h1 class="title-first">Hello Flower! <br />FA EXHIBITION 2021</h1>
-        <section class="information">
-          <h2 class="title-second">INFORMATION</h2>
+        <h1 class="title-first" id="js-title">Hello Flower! <br />FA EXHIBITION 2021</h1>
+        <section class="information" id="js-information">
+          <h2 class="title-second" >INFORMATION</h2>
           <p>2021 JUL 1(THU)-3(SAT)</p>
           <p>DAY1 10am-6pm OTHER 10am-5:30pm</p>
           <p>at PARK SIDE HALL</p>
@@ -42,24 +64,24 @@
           </p>
         </section>
         <section class="gallery">
-          <h2 class="title-second">GALLERY</h2>
-          <div class="gallery-box">
-            <div class="item-left">
+          <h2 class="title-second" id="js-gallery">GALLERY</h2>
+          <div class="gallery-box ">
+            <div class="item-left gallery-item">
               <img src="src/img/flower1.jpg" alt="flower" />
             </div>
-            <div class="item-right">
+            <div class="item-right gallery-item">
               <img src="src/img/flower2.jpg" alt="flower" />
             </div>
-            <div class="item-left">
+            <div class="item-left gallery-item">
               <img src="src/img/flower3.jpg" alt="flower" />
             </div>
-            <div class="item-right">
+            <div class="item-right gallery-item">
               <img src="src/img/flower4.jpg" alt="flower" />
             </div>
-            <div class="item-left">
+            <div class="item-left gallery-item">
               <img src="src/img/flower5.jpg" alt="flower" />
             </div>
-            <div class="item-right">
+            <div class="item-right gallery-item">
               <img src="src/img/flower6.jpg" alt="flower" />
             </div>
           </div>
@@ -103,5 +125,6 @@
         </div>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
