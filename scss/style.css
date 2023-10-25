@@ -10,8 +10,10 @@ html {
 
 body {
   color: #fff;
-  width: 100%;
+  width: 100vw;
+  max-width: 100vw;
   background-color: #000;
+  overflow-x: hidden;
 }
 
 main {
@@ -27,12 +29,14 @@ section {
 .first-view {
   background-color: #000;
   height: 100vh;
+  max-width: 100vw;
 }
 .first-view .image-box {
   display: flex;
 }
 .first-view .image-box .image-item {
   width: 33.3333333333vw;
+  max-width: 33.3333333333vw;
 }
 .first-view .image-box .image-item img {
   width: 100%;
