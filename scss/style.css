@@ -264,21 +264,42 @@ header .active span:nth-child(3) {
 }
 
 .access {
+  position: relative;
+  z-index: 2;
+  min-height: 100%;
   padding-top: 300px;
   margin-bottom: 300px;
 }
-.access p:nth-child(2) {
+.access .cover-img {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+  transition: opacity 1s;
+}
+.access .cover-img img {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+.access.back .cover-img {
+  opacity: 1;
+}
+.access p:nth-child(3) {
   margin-top: 30px;
   font-size: 0.9rem;
   font-weight: 500;
   margin-top: 40px;
 }
-.access p:nth-child(3) {
+.access p:nth-child(4) {
   font-size: 0.5rem;
   font-weight: 200;
   margin-top: 40px;
 }
-.access p:nth-child(4) {
+.access p:nth-child(5) {
   font-size: 0.5rem;
   font-weight: 200;
   margin-top: 40px;

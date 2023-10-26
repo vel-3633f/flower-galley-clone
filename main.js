@@ -40,7 +40,9 @@ window.addEventListener("scroll", function () {
   const title = document.getElementById('js-title');
   const inf = document.getElementById('js-information');
   const gallery = document.getElementById('js-gallery');
-  const galleryItem = document.getElementsByClassName('gallery-item')
+  const galleryItem = document.getElementsByClassName('gallery-item');
+  const access = document.getElementsByClassName('access');
+  console.log(access[0]);
   if (scroll > title.offsetTop - inner / 1.4) {
     title.classList.add("show");
   }
@@ -54,6 +56,13 @@ window.addEventListener("scroll", function () {
     if (scroll > galleryItem[i].offsetTop - inner / 1.4) {
       galleryItem[i].classList.add("show");
     }
+  }
+  if (scroll > access[0].offsetTop - inner /1.4 && scroll < access[0].offsetTop + inner/1.8) {
+    access[0].classList.add("back");
+    side.classList.remove("show");
+  } else {
+    access[0].classList.remove("back");
+    side.classList.add("show");
   }
 });
 
